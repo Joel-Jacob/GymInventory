@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#012E40"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/gymItemsText"
+        style="@style/titleStyle"
+        android:text="Gym Items"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/gymItemsListView"/>
+
+    <ListView
+        android:id="@+id/gymItemsListView"
+        style="@style/listStyle"
+        app:layout_constraintTop_toBottomOf="@+id/gymItemsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/purchasedItemsText"
+        />
+    <TextView
+        android:id="@+id/purchasedItemsText"
+        style="@style/titleStyle"
+        android:text="Purchased Items"
+        app:layout_constraintTop_toBottomOf="@+id/gymItemsListView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/purchasedItemsListView"
+        />
+    <ListView
+        android:id="@+id/purchasedItemsListView"
+        style="@style/listStyle"
+        app:layout_constraintTop_toBottomOf="@+id/purchasedItemsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
